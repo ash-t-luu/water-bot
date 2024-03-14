@@ -1,9 +1,11 @@
-# water-bot in discord 💧🧊
+# water-bot 
 
-## personal discord bot that will remind you to drink water every hour. 
+## about
 
-made for my friends to help them with their daily water intake for good health 🍵
+a personal discord bot that reminds you to drink water every hour 
 
-- /start command: starts the reminders
-- /stop command: stops the reminders
+made for my friends to help them with their daily water intake for good health 🍵✨🧘
+
+💧 `/start`: starts the reminders
+💧 `/stop`: stops the reminders
 
