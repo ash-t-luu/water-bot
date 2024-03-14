@@ -2,13 +2,18 @@
   "name": "discord-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "ts-start": "ts-node ."
   },
-  "keywords": ["lifestyle", "reminder", "discord bot"],
+  "keywords": [
+    "lifestyle",
+    "reminder",
+    "discord bot"
+  ],
   "author": "ashley l.",
   "license": "ISC",
   "dependencies": {
@@ -16,6 +21,9 @@
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
-    "eslint": "^8.57.0"
+    "@types/node": "^20.11.27",
+    "eslint": "^8.57.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
   }
 }
