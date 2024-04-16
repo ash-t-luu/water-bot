@@ -1,12 +1,15 @@
-const { SlashCommandBuilder } = require('discord.js');
+import { SlashCommandBuilder } from 'discord.js';
+import * as dotenv from 'dotenv';
+dotenv.config();
+import { Command } from '../../types/command';
 
-let timeout;
+let timeout: ReturnType<typeof setInterval>;
 
-module.exports = {
+export const startReminders: Command = {
     data: new SlashCommandBuilder()
         .setName('start')
         .setDescription('START water reminders 🟢'),
-    async execute(interaction) {
+    execute: async (interaction) => {
         timeout = setInterval(() => {
             const client = interaction.client;
             client.users.send(process.env.A_ID, {
@@ -21,10 +24,11 @@ module.exports = {
                 .catch(() => {
                     console.error('User has DMs closed or has no mutual servers with the bot.');
                 });
-        }, 3_600_000);
+        }, 4_500_000);
         await interaction.reply('reminders has started. you got this!');
     },
-    getTimeout: function () {
-        return timeout;
-    },
 };
+
+export const getTimeout = () => {
+    return timeout;
+}

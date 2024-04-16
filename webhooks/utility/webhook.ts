@@ -1,5 +1,6 @@
-const { EmbedBuilder, WebhookClient } = require('discord.js');
-require('dotenv').config();
+import { EmbedBuilder, WebhookClient } from 'discord.js';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const webhookClient = new WebhookClient({ id: process.env.WEBHOOK_ID, token: process.env.WEBHOOK_TOKEN });
 

@@ -1,11 +1,12 @@
-const { SlashCommandBuilder } = require('discord.js');
-const { getTimeout } = require('./start.js');
+import { SlashCommandBuilder } from 'discord.js';
+import { Command } from '../../types/command';
+import { getTimeout } from './start.js';
 
-module.exports = {
+export const stopReminders: Command = {
     data: new SlashCommandBuilder()
         .setName('stop')
         .setDescription('STOP water reminders 🛑'),
-    async execute(interaction) {
+    execute: async (interaction) =>{
         await interaction.reply('reminders has stopped. good job today!');
         const timeout = getTimeout();
         clearInterval(timeout);
